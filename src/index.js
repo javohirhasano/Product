@@ -1,17 +1,57 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react"
+import ReactDOM from "react-dom"
+import FilterableProducTable from "./FilterableProducTable";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const PRODUCTS = [
+  { price: '$3.10', stocked: false, Name: 'shaftoli' },
+  { price: '$3.40', stocked: true, Name: 'gilos' },
+  { price: '$1.80', stocked: true, Name: 'nok' },
+  { price: '$2.00', stocked: false, Name: 'sut' },
+  { price: '$1.50', stocked: false, Name: 'olma sharbati' },
+  { price: '$0.30', stocked: false, Name: 'mineral suv' },
+  { price: '$3.10', stocked: true, Name: 'coca cola' },
+  { price: '$3.40', stocked: true, Name: 'fanta' },
+  { price: '$1.80', stocked: true, Name: 'gosht' },
+  { price: '$2.00', stocked: true, Name: 'daftar' },
+  { price: '$1.50', stocked: true, Name: 'kango' },
+  { price: '$0.30', stocked: true, Name: 'anor' },
+  { price: '$3.10', stocked: true, Name: 'shaftoli' },
+  { price: '$3.40', stocked: true, Name: 'gilos' },
+  { price: '$1.80', stocked: true, Name: 'nok' },
+  { price: '$2.00', stocked: true, Name: 'sut' },
+  { price: '$1.50', stocked: true, Name: 'olma sharbati' },
+  { price: '$0.30', stocked: true, Name: 'mineral suv' },
+  { price: '$3.10', stocked: true, Name: 'snikers' },
+  { price: '$3.40', stocked: true, Name: 'fanta' },
+  { price: '$1.80', stocked: true, Name: 'gosht' },
+  { price: '$2.00', stocked: true, Name: 'daftar' },
+  { price: '$1.50', stocked: true, Name: 'kango' },
+  { price: '$0.30', stocked: true, Name: 'anor' },
+  { price: '$3.10', stocked: true, Name: 'flesh' },
+  { price: '$3.40', stocked: true, Name: 'red bull' },
+  { price: '$1.80', stocked: false, Name: 'mandarin' },
+  { price: '$2.00', stocked: true, Name: 'apelsin' },
+  { price: '$1.50', stocked: true, Name: 'banan' },
+  { price: '$0.30', stocked: true, Name: 'limon' },
+  { price: '$3.10', stocked: false, Name: 'tarvuz' },
+  { price: '$3.40', stocked: true, Name: 'qovun' },
+  { price: '$1.80', stocked: true, Name: 'kartoshka' },
+  { price: '$2.00', stocked: false, Name: 'piyoz' },
+  { price: '$1.50', stocked: true, Name: 'sabzi' },
+  { price: '$0.30', stocked: true, Name: 'sholgom' },
+  { price: '$3.10', stocked: true, Name: 'orbit' },
+  { price: '$3.40', stocked: true, Name: 'kango' },
+  { price: '$1.80', stocked: true, Name: 'ermak semichka' },
+  { price: '$2.00', stocked: true, Name: 'yogurt' },
+  { price: '$1.50', stocked: true, Name: 'qurt' },
+  { price: '$0.30', stocked: false, Name: 'qatiq' },
+  { price: '$3.10', stocked: true, Name: 'kalbasa' },
+  { price: '$3.40', stocked: false, Name: 'maska' },
+  { price: '$1.80', stocked: true, Name: 'salfetka' },
+  { price: '$2.00', stocked: true, Name: 'ruchka' },
+  { price: '$1.50', stocked: false, Name: 'albom' },
+  { price: '$0.30', stocked: true, Name: 'uyinchoq ayiqcha' }
+]
+ReactDOM.render(<FilterableProducTable products={PRODUCTS} />,
+  document.getElementById('root'));
